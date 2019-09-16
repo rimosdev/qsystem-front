@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [  
+  { path: 'manage',    loadChildren: 'app/manage/manage.module#ManageModule' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
