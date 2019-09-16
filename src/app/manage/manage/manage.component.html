@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Manage data</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="nav-left">
+        <li
+          *ngFor="let d_table of data_tables"
+          [routerLink]="['/manage/read/' + d_table.id]"
+          [ngClass]="{active: (selected_data_table && d_table.id == selected_data_table.id)}"
+          >
+          {{ d_table.key_name }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-8 card">
+      <span *ngIf="action_type != 'read' && action_type != 'edit' && !selected_data_table"><br>Select a field!</span>
+      <app-manage-read *ngIf="action_type == 'read' && selected_data_table" [_data_table]="selected_data_table"></app-manage-read>
+      <app-manage-edit *ngIf="action_type == 'edit' && selected_data_table" [_data_table]="selected_data_table" (field_save)="field_save()"></app-manage-edit>
+    </div>
+  </div>
+</div>

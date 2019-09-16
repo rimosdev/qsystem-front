@@ -1,0 +1,25 @@
+:root {
+  position: relative;
+}
+.btn-primary {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+h1 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: .85rem;
+  margin-bottom: 1.5rem;
+  strong, label {
+    display: block;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+}
+textarea {
+  min-width: 50%;
+}

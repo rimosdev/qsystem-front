@@ -1,0 +1,19 @@
+@import './../../styles/constants';
+
+.navbar {
+  border-bottom: solid 2px #eee;
+  padding-bottom: 0;
+  margin-bottom: 1.5rem;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  .menu-item a {
+    color: $secondary-color;
+    &.active {
+      background: $secondary-color;
+      color: #fff;
+    }
+  }
+  
+}

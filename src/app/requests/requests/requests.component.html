@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Requests</h1>
+  <div class="data-grid-container">
+    <ul class="select-status">
+      <ng-container  *ngFor="let _status of status">
+        <li (click)="doFilterStatus(_status)" [ngClass]="{'active': _status == selected_status}">{{_status}}</li>
+      </ng-container>
+    </ul>
+    <app-data-grid *ngIf="filtered_data_table && filtered_data_table != null"
+                  [_keys]="['date', 'reason', 'status']"
+                  [_title]="'PENDING REQUESTS'"
+                  [_data]="filtered_data_table"
+                  >
+    </app-data-grid>
+  </div>
+</div>

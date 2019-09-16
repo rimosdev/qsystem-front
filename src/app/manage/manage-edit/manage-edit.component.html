@@ -1,0 +1,29 @@
+<a class="_btn btn-primary btn-save" (click)="save()">Save</a>
+<p>
+  <label>Key name</label>
+  <input type="text" [(ngModel)]="data_table.key_name" name="key_name">
+</p>
+<p>
+  <label>Description</label>
+  <textarea name="description" [(ngModel)]="data_table.description"></textarea>
+</p>
+<p>
+  <label>Type</label>
+  <select name="data_type" [(ngModel)]="data_table.data_type">
+    <option *ngFor="let data_type of data_types">{{data_type}}</option>
+  </select>
+</p>
+<p>
+  <label><input type="checkbox" [(ngModel)]="data_table.sensibility" name="sensitivity"> Is this personal data?</label>
+</p>
+<div class="data-grid-container">
+  <app-data-grid
+                [_keys]="['value', 'description']"
+                [_title]="'POSSIBLE VALUES'"
+                [is_edit]="true"
+                [_data]="data_table.posible__values"
+                [_data_new]="_data_new"
+                >
+  </app-data-grid>
+</div>
+<a class="_btn btn-secondary btn-add" (click)="add()">Add possible value</a>

@@ -1,0 +1,33 @@
+@import './../../../styles/constants';
+
+.nav-left {
+  background: $primary-color;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+    &:hover, &.active {
+      background: $secondary-color;
+      &::after {
+        font-family: 'Material Icons';
+        content: "keyboard_arrow_right";
+        position: absolute;
+        right: 0;
+        top: .5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+h1 {
+  margin: 0 0 2rem 0;
+}
+.card {
+  padding-bottom: 15px;
+}

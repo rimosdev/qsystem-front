@@ -1,0 +1,23 @@
+<h1>{{data_table.key_name}}</h1>
+<a class="_btn btn-primary btn-create" [routerLink]="['/manage/edit/' + data_table.id]">Edit this</a>
+<p>
+  <strong>Description</strong>
+  {{data_table.description}}
+</p>
+<p>
+  <strong>Type</strong>
+  {{data_table.data_type}}
+</p>
+<p>
+  <strong>Sensitivity</strong>
+  {{data_table.sensibility ? 'This is personal data, and cannot be distributed in war form' : '-'}}
+</p>
+
+<div class="data-grid-container">
+  <app-data-grid
+                [_keys]="['value', 'description']"
+                [_title]="'POSSIBLE VALUES'"
+                [_data]="data_table.posible__values"
+                >
+  </app-data-grid>
+</div>

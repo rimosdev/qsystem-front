@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
+  data_types: ['integer', 'string', 'datetime'],
   'url': {
-    'data_tables': 'http://localhost:8000/api/table_field'
+    // 'data_tables': 'http://localhost:8000/api/table_field'
+    'data_tables': 'http://qsystem-ws.graficaideamia.com/api/table_field',
+    'requests': 'http://qsystem-ws.graficaideamia.com/api/request'
   }
 };
 

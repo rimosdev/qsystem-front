@@ -1,0 +1,16 @@
+<!-- Top Nabvar-->
+<div id="navigation">
+  <nav class="navbar container navbar-light navbar-expand-sm">
+    <!-- Logo--><a href="/" rel="home" itemprop="url" class="navbar-brand">{{ title }}</a>
+    <!-- Responsive Toggle Button-->
+    <button type="button" class="navbar-toggler" (click)="toogleMenu()" [ngClass]="{'collapsed': !menu_show}"><span class="navbar-toggler-icon"></span></button>
+    <!-- Navbar-->
+    <div id="navBar" class="navbar-collapse collapse" [ngClass]="{'show': menu_show}">
+      <ul class="navbar-nav">
+        <li class="menu-item"><a [routerLink]="['/view/all']" routerLinkActive="active">Review</a></li>
+        <li class="menu-item"><a [routerLink]="['/request']" routerLinkActive="active">Request</a></li>
+        <li class="menu-item"><a [routerLink]="['/manage']" routerLinkActive="active">Manage</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>

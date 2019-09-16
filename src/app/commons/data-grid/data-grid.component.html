@@ -1,0 +1,12 @@
+<h2>{{_title}}</h2>
+<div class="data-grid">
+  <div class="grid-header">
+    <div class="cell" *ngFor="let cell of _keys">{{cell}}</div>
+  </div>
+  <div class="grid-data" *ngFor="let _row of _data">
+    <div class="cell" *ngFor="let cell of _keys"><input *ngIf="is_edit" type="text" [value]="_row[cell]"><span *ngIf="!is_edit" [class]="cell + ' ' + _row[cell]" >{{_row[cell]}}</span></div>
+  </div>
+  <div class="grid-data" *ngFor="let _row of _data_new">
+    <div class="cell" *ngFor="let cell of _keys"><input type="text" [value]="_row[cell]"></div>
+  </div>
+</div>
